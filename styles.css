@@ -1,0 +1,71 @@
+/* Paleta de Cores */
+:root {
+    --gray-bg: #ffffff;
+    --dark-gray: #343a40;
+    --light-gray: #d6d8db;
+    --yellow: #ffc107;
+    --yellow-hover: #e0a800;
+}
+
+/* Estilo Geral */
+body {
+    font-family: 'Times Newe Roman', semibold-600;
+    background-color: var(--gray-bg);
+    color: var(--dark-gray);
+}
+
+/* Header */
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+/* Botão Customizado */
+.btn-yellow {
+    background-color: var(--yellow);
+    border: none;
+    color: var(--dark-gray);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background-color: var(--yellow-hover);
+}
+
+/* Card */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-gray);
+}
+
+/* Lista de Alunos */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item span {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background-color: var(--dark-gray);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #dc3545;
+}

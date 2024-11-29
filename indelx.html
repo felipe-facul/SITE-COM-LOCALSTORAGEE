@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia - Cadastro de Alunos  </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-yellow text-white py-4">
+        <div class="container text-center">
+            <h1>ACADEMIA UNIVERSITÁRIA 🎓</h1>
+            <p>CADASTRE OS ALUNOS PARA UMA MELHOR ORGANIZAÇÃO DO NOSSO CENTRO DE TREINAMENTO </p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Formulário de Cadastro -->
+        <section class="card shadow-sm mb-4">
+            <div class="card-header bg-dark text-white">
+                <h3>Adicionar Novo Aluno</h3>
+            </div>
+            <div class="card-body bg-light">
+                <form id="studentForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstNameInput" class="form-label">Nome</label>
+                            <input type="text" id="firstNameInput" class="form-control" placeholder="Digite o nome">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastNameInput" class="form-label">Sobrenome</label>
+                            <input type="text" id="lastNameInput" class="form-control" placeholder="Digite o sobrenome">
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-4">
+                            <label for="ageInput" class="form-label">Idade</label>
+                            <input type="number" id="ageInput" class="form-control" placeholder="Idade Miníma (18) " min="18" max="100">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="genderInput" class="form-label">Gênero</label>
+                            <select id="genderInput" class="form-select">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="planInput" class="form-label">Plano</label>
+                            <select id="planInput" class="form-select">
+                                <option value="Mensal">Mensal</option>
+                                <option value="Trimestral">Trimestral</option>
+                                <option value="Anual">Anual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-yellow w-100 mt-4" id="addStudentButton">Cadastrar Aluno</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Lista de Alunos -->
+        <section class="card shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h3>Lista de Alunos</h3>
+            </div>
+            <ul class="list-group list-group-flush" id="studentList"></ul>
+        </section>
+
+        <!-- Botão para Limpar LocalStorage -->
+        <div class="text-end mt-3">
+            <button class="btn btn-danger" onclick="clearLocalStorage()">Limpar Todos os Dados</button>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Academia Universitária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
